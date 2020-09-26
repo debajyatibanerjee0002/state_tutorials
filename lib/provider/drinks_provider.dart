@@ -24,6 +24,11 @@ class DrinksProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  void toggle(bool selected) {
+    selected = !selected;
+    notifyListeners();
+  }
+
   List<Drink> get selectedDrinks =>
       _drinks.where((element) => element.selected).toList();
 

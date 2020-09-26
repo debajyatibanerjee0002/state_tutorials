@@ -4,6 +4,7 @@ import 'package:smtutorial/models/drink.dart';
 class DrinksWidget extends StatelessWidget {
   final Drink drink;
   final Function onChanged;
+  // final bool isChanged;
 
   const DrinksWidget({Key key, this.drink, this.onChanged}) : super(key: key);
 
@@ -15,7 +16,11 @@ class DrinksWidget extends StatelessWidget {
           value: drink.selected,
           onChanged: onChanged,
         ),
-        Text(drink.name)
+        Text(
+          drink.name,
+          style: TextStyle(
+              decoration: drink.selected ? TextDecoration.lineThrough : null),
+        ),
       ],
     );
   }

@@ -8,7 +8,8 @@ import 'package:smtutorial/widgets/drinks_widget.dart';
 import '../constants.dart';
 
 class CheckboxProviderScreen extends StatelessWidget {
-  final List<Drink> drinks = [];
+  // final List<Drink> drinks = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
